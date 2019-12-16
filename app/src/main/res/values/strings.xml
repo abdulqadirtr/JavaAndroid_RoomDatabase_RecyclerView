@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerView_CardView</string>
+    <string name="addBtn">Add Product</string>
+    <string name="viewBtn">View Product</string>
+</resources>
