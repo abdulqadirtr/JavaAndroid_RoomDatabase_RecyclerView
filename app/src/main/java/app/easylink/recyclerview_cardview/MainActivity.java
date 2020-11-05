@@ -1,10 +1,11 @@
 package app.easylink.recyclerview_cardview;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import app.easylink.recyclerview_cardview.room.AppDatabase;
 import app.easylink.recyclerview_cardview.view.AddProduct;
