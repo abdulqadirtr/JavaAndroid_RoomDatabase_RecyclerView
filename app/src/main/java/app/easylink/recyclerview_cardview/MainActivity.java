@@ -2,6 +2,8 @@ package app.easylink.recyclerview_cardview;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2;
     public static AppDatabase appDatabase;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +32,12 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.viewBtn);
 
         appDatabase = AppDatabase.getInstance(this);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //  Intent intent = new Intent(MainActivity.class, );
-                Intent intent = new Intent(MainActivity.this, AddProduct.class);
-                startActivity(intent);
-            }
+       btn1. setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AddProduct.class);
+            startActivity(intent);
         });
+
+
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
+
 }
