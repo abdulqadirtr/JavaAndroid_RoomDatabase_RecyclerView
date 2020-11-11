@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-This is a sample java android application designed to add values to SQLite database 
+This is a a java android application for adding and deleting values from SQLite database 
 using Room persistence library, and display the data from database using RecyclerVIew.
 
 ## Technologies used:
