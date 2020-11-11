@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="1dp">
 
 
         <TextView
@@ -20,19 +20,16 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="156dp"
-            android:layout_marginLeft="156dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="38dp"
-            android:layout_marginRight="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="201dp"
+            android:layout_marginRight="201dp"
             android:layout_toStartOf="@+id/btnDelete"
             android:layout_toLeftOf="@+id/btnDelete"
-            android:gravity="center"
             android:text="asfs"
-            android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/description"
@@ -41,9 +38,9 @@
             android:layout_below="@+id/title"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="170dp"
-            android:layout_marginLeft="181dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="11dp"
             android:layout_marginBottom="5dp"
             android:text="Welocme"
             android:textSize="16dp"
@@ -51,16 +48,16 @@
 
         <Button
             android:id="@+id/btnDelete"
-            android:layout_width="60dp"
-            android:layout_height="35dp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginRight="33dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
             android:gravity="right"
-            android:text="Delete"
+            android:background="@drawable/ic_baseline_delete_24"
             android:textSize="10dp" />
 
     </RelativeLayout>

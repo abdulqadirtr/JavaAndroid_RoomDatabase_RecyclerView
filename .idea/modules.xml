@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/JavaAndroid_RoomDatabase_RecyclerView.iml" filepath="$PROJECT_DIR$/.idea/JavaAndroid_RoomDatabase_RecyclerView.iml" group="JavaAndroid_RoomDatabase_RecyclerView" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="JavaAndroid_RoomDatabase_RecyclerView/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaAndroid_RoomDatabase_RecyclerView.iml" filepath="$PROJECT_DIR$/.idea/JavaAndroid_RoomDatabase_RecyclerView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaAndroid_RoomDatabase_RecyclerView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaAndroid_RoomDatabase_RecyclerView.app.iml" />
     </modules>
   </component>
 </project>

@@ -28,6 +28,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     public ProductAdapter(List<Product> myItem) {
         this.myItem = myItem;
+        this.context = context;
+
     }
 
     @NonNull
@@ -40,24 +42,34 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(final ProductAdapter.ViewHolder viewHolder, final int position) {
 
-        viewHolder.titleText.setText(myItem.get(position).getName());
+        if(myItem.size() > 0){
+            viewHolder.btnDelete.setVisibility(View.VISIBLE);
+            viewHolder.titleText.setVisibility(View.VISIBLE);
+            viewHolder.descriptionText.setVisibility(View.VISIBLE);
+
+
+            viewHolder.titleText.setText(myItem.get(position).getName());
         viewHolder.descriptionText.setText(myItem.get(position).getAddress());
         viewHolder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Product d = myItem.get(viewHolder.getAdapterPosition());
+                MainActivity.appDatabase.productDao().delete(d);
 
-                Product product = new Product();
-                product.setId(position);
-                Toast.makeText(context, "User added Successfully "+ position, Toast.LENGTH_SHORT).show();
-
-                MainActivity.appDatabase.productDao().delete(product);
-                int p = viewHolder.getAdapterPosition();
-                myItem.remove(p);
-                notifyItemRemoved(p);
-                notifyItemRangeChanged(p, myItem.size());
+                int position = viewHolder.getAdapterPosition();
+                myItem .remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position, myItem.size());
 
             }
         });
+        }
+        else
+        {
+            viewHolder.btnDelete.setVisibility(View.INVISIBLE);
+            viewHolder.titleText.setVisibility(View.INVISIBLE);
+            viewHolder.descriptionText.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -82,6 +94,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             titleText = itemView.findViewById(R.id.title);
             descriptionText = itemView.findViewById(R.id.description);
             btnDelete = itemView.findViewById(R.id.btnDelete);
+            btnDelete.setVisibility(View.INVISIBLE);
         }
     }
 }

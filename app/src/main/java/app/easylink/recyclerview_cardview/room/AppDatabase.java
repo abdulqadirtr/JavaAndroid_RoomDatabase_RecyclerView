@@ -9,7 +9,8 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Product.class}, version = 1)
 
-public abstract class AppDatabase extends RoomDatabase {
+public abstract class
+AppDatabase extends RoomDatabase {
 
     private static final String dbName = "productDb";
     private static AppDatabase appDatabase;
